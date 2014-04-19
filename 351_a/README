@@ -1,24 +1,7 @@
                         ---- GrblController ----
 
-GrblController is a gcode sender, monitor and homing tool for GRBL for 
-Mac, Windows and Linux systems written using the Qt Desktop Framework in C++.
-
-Enhanced by Zapmaker. Kosme did a great deal of excellent foundation work on this 
-project.
-
-Version 3.0 is a near-complete rewrite of the C++ code fixing all known bugs.
-The other major enhancement is native Mac OSX support (including older 32 bit Intel 10.5).
-
-The code was tested with real milling projects using the Shapeoko and works
-pretty well. For a list of possible future enhancements, see file TODO.
-
-Prebuilt binaries/installers can be found on github's download section for this
-project (GrblHoming). Alternately, if you download the (a) Qt SDK from Nokia or 
-(b) the Qt source from Qt Project along with the standalone Qt Creator, you can
-build from source.
-
-Details on how to do this can be found here:
-http://zapmaker.org/
+V3.5.1.A
+- axis C (around Z) -> A (around X)
 
 V3.5.1
 Enhancements
