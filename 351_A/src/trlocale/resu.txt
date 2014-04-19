@@ -1,0 +1,3 @@
+Updating '..\..\trlocale\GrblController_fr.qm'...
+    Generated 183 translation(s) (183 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
