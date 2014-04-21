@@ -191,12 +191,12 @@
     <message>
         <location filename="../gcode.cpp" line="886"/>
         <source>Incorrect - extra axis present in hardware but options set for only 3 axes. Please fix options.</source>
-        <translation>L&apos;axe supplémentaire existe pas matériellement. Veuillez corriger les options en cochant 4 àme axe.</translation>
+        <translation>L&apos;axe supplémentaire existe matériellement. Veuillez corriger les options en cochant 4 ème axe.</translation>
     </message>
     <message>
         <location filename="../gcode.cpp" line="895"/>
         <source>Incorrect - extra axis not present in hardware but options set for &gt; 3 axes. Please fix options.</source>
-        <translation>L&apos;axe supplémentaire n&apos;existe pas matériellement. Veuillez corriger les options  en décochant 4 àme axe.</translation>
+        <translation>L&apos;axe supplémentaire n&apos;existe pas matériellement. Veuillez corriger les options  en décochant 4 ème axe.</translation>
     </message>
     <message>
         <location filename="../gcode.cpp" line="984"/>
