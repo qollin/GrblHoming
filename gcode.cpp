@@ -566,8 +566,8 @@ bool GCode::waitForOk(QString& result, int waitSec, bool sentReqForLocation, boo
                     else
                     {
                         CmdResponse cmdResp = sendCount.takeFirst();
-                        diag(qPrintable(tr("GOT[%d]:%s for %s\n")), cmdResp.line, tmpTrim.toLocal8Bit().constData(), cmdResp.cmd.toLocal8Bit().constData());
-                        
+                        diag(qPrintable(tr("GOT[%d]: '%s' for '%s' (aggressive)\n")), cmdResp.line,
+                             tmpTrim.toLocal8Bit().constData(), cmdResp.cmd.trimmed().toLocal8Bit().constData());
 						//diag("DG Buffer %d", sendCount.size());
                         
 						emit setQueuedCommands(sendCount.size(), true);
@@ -584,8 +584,8 @@ bool GCode::waitForOk(QString& result, int waitSec, bool sentReqForLocation, boo
                     {
                         CmdResponse cmdResp = sendCount.takeFirst();
                         orig = cmdResp.cmd;
-                        diag(qPrintable(tr("GOT[%d]:%s for %s\n")), cmdResp.line, tmpTrim.toLocal8Bit().constData(), orig.toLocal8Bit().constData());
-                        
+                        diag(qPrintable(tr("GOT[%d]: '%s' for '%s' (aggressive)\n")), cmdResp.line,
+                             tmpTrim.toLocal8Bit().constData(), cmdResp.cmd.trimmed().toLocal8Bit().constData());
 						//diag("DG Buffer %d", sendCount.size());
                         
                         emit setQueuedCommands(sendCount.size(), true);
@@ -599,7 +599,7 @@ bool GCode::waitForOk(QString& result, int waitSec, bool sentReqForLocation, boo
                 }
                 else
                 {
-                    diag(qPrintable(tr("GOT:%s\n")), tmpTrim.toLocal8Bit().constData());
+                    diag(qPrintable(tr("GOT: '%s' (aggressive)\n")), tmpTrim.trimmed().toLocal8Bit().constData());
                     parseCoordinates(received, aggressive);
                 }
 
@@ -984,9 +984,10 @@ void GCode::sendStatusList(QStringList& listToSend)
 }
 
 // called once a second to capture any random strings that come from the controller
-#pragma GCC diagnostic ignored "-Wunused-parameter" push
 void GCode::timerEvent(QTimerEvent *event)
 {
+    Q_UNUSED(event);
+
     if (port.isPortOpen())
     {
         char tmp[BUF_SIZE + 1] = {0};
@@ -1019,7 +1020,6 @@ void GCode::timerEvent(QTimerEvent *event)
         sendStatusList(listToSend);
     }
 }
-#pragma GCC diagnostic ignored "-Wunused-parameter" pop
 
 void GCode::sendFile(QString path)
 {
@@ -1769,7 +1769,7 @@ void GCode::axisAdj(char axis, float coord, bool inv, bool absoluteAfterAxisAdj,
 {
     if (inv)
     {
-        coord =- coord;
+        coord = (-coord);
     }
 
     QString cmd = QString("G01 ").append(axis)

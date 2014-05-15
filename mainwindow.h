@@ -166,6 +166,7 @@ private slots:
     void setQueuedCommands(int commandCount, bool running);
     void setLcdState(bool valid);
     void refreshPosition();
+    void comboStepChanged(const QString& text);
 
 private:
     // enums
@@ -228,6 +229,8 @@ private:
     int queuedCommandState;
     QStringList fullStatus;
     bool lastLcdStateValid;
+    float jogStep;
+    QString jogStepStr;
 
     //methods
     int SendJog(QString strline);
