@@ -20,7 +20,6 @@ build from source.
 Details on how to do this can be found here:
 http://zapmaker.org/
 
-
 V3.6.1->8c1   (LETARTARE proposals)
 
 - Improved to the same card 3 and 4 axis detection
@@ -29,8 +28,7 @@ V3.6.1->8c1   (LETARTARE proposals)
 - Updating of the French translation
 - Works with versions Grbl :
    1- Three axes 0.8c, 0.9D,
-   2- Four axes 0845, future 0.8c1 (0.8c1 axes)
-
+   2- Four axes 0845, future 0.8c1 (0.8c1 to 4 axes)
 
 V3.6.1
 Executable release rollup
