@@ -676,11 +676,10 @@ void MainWindow::decFourth()
 		}
 	}
 /// <--
-	else  {
+	else  
 */
 		disableAllButtons();
 		emit axisAdj(controlParams.fourthAxisType, -jogStep, invFourth, absoluteAfterAxisAdj, 0);
-	}
 
 }
 void MainWindow::incFourth()
