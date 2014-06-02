@@ -679,7 +679,7 @@ void MainWindow::decFourth()
 	else  
 */
 		disableAllButtons();
-		emit axisAdj(controlParams.fourthAxisType, -jogStep, invFourth, absoluteAfterAxisAdj, 0);
+		emit axisAdj(controlParams.fourthAxisType, -jogStep, invFourth, absoluteAfterAxisAdj, 0);	
 }
 void MainWindow::incFourth()
 {

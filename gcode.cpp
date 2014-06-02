@@ -849,18 +849,6 @@ bool GCode::waitForStartupBanner(QString& result, int waitSec, bool failOnNoFoun
     return status;
 }
 
-/*
-/// LETARTARE  May 13, 2014
-	1- frame1 : < 8c (3 axes), 0.845 (4 axes)  	-> $$==0
-		received == "MPos:[....],WPos:[....]"
-	2- frame2 : 0.8c1 (4 axes)       			-> $$==1
-		received == "<State,MPos:...,WPos:...>"
-    3- frame2 : 0.8c (3 axes)        			-> $$==1
-		received == "<State,MPos:...,WPos:...>"
-    4- frame3 : 0.9d (3 axes), 0.9d1 (4 axes) 	-> $$==1
-		received == "<State,MPos: ... ,WPos:...,Ln=..>"
-*/
-
 void GCode::parseCoordinates(const QString& received, bool aggressive)
 {
     if (aggressive)
@@ -872,7 +860,7 @@ void GCode::parseCoordinates(const QString& received, bool aggressive)
         parseCoordTimer.restart();
     }
 
-	bool good = false, goodMPos = false;
+	bool good = false;
 	int captureCount ;
 	QString state;
     QString prepend;
@@ -887,38 +875,25 @@ void GCode::parseCoordinates(const QString& received, bool aggressive)
 	QString coordRegExp;
 	QRegExp rxStateMPos;
 	QRegExp rxWPos;
-/// 1 axis
-	QString format1("(-*\\d+\\.\\d+)") ;
-	QString sep(",");
-	/// 3 axes
-	QString format3 = format1 + sep + format1 + sep + format1 ;
-	/// 4 axes
-	QString format4 = format3 + sep + format1 ;
-	QString format ;
-    int naxis ;
-	for (naxis = MAX_AXIS_COUNT; naxis >= DEFAULT_AXIS_COUNT; naxis--) {
+	/// 3 axis
+	QString format("(-*\\d+\\.\\d+),(-*\\d+\\.\\d+)") ;
+    int maxaxis = MAX_AXIS_COUNT, naxis ;
+    for (naxis = DEFAULT_AXIS_COUNT; naxis <= maxaxis; naxis++) {
 		if (!doubleDollarFormat)
 			captureCount = naxis ;
 		else
 			captureCount = naxis + 1 ;
-
-               if (naxis == MAX_AXIS_COUNT )
-			format = format4;
-		else
-			format = format3;
-
+		//
+		format += ",(-*\\d+\\.\\d+)" ;
 		coordRegExp = prepend + format + append ;
 		rxStateMPos = QRegExp(preamble + coordRegExp);
-                goodMPos = rxStateMPos.indexIn(received, 0) != -1
-					&& rxStateMPos.captureCount() == captureCount
-					;
-		if (goodMPos) {
-			rxWPos = QRegExp(QString("WPos:") + coordRegExp);
-			good = rxWPos.indexIn(received, 0) != -1
-					&& rxWPos.captureCount() == naxis
-					;
-}
-		// find naxis ...
+		rxWPos = QRegExp(QString("WPos:") + coordRegExp);
+		good = rxStateMPos.indexIn(received, 0) != -1
+			   && rxStateMPos.captureCount() == captureCount
+			   && rxWPos.indexIn(received, 0) != -1
+			   && rxWPos.captureCount() == naxis
+			   ;
+		// find ...
 		if (good)
 			break;
 	}
@@ -966,15 +941,15 @@ void GCode::parseCoordinates(const QString& received, bool aggressive)
 			workCoord.stoppedZ = false;
 
 		workCoord.sliderZIndex = sliderZCount;
-if (doubleDollarFormat)
-			diag(qPrintable(tr("Decoded: State:%s")),  qPrintable(state) );
         if (numaxis == DEFAULT_AXIS_COUNT)
-diag(qPrintable(tr("Decoded: MPos: %f,%f,%f WPos: %f,%f,%f\n")),			
+			diag(qPrintable(tr("Decoded: State:%s MPos: %f,%f,%f WPos: %f,%f,%f\n")),
+				 qPrintable(state),
 				 machineCoord.x, machineCoord.y, machineCoord.z,
 				 workCoord.x, workCoord.y, workCoord.z
 				 );
         else if (numaxis == MAX_AXIS_COUNT)
-diag(qPrintable(tr("Decoded: MPos: %f,%f,%f,%f WPos: %f,%f,%f,%f\n")),
+			diag(qPrintable(tr("Decoded: State:%s MPos: %f,%f,%f,%f WPos: %f,%f,%f,%f\n")),
+				 qPrintable(state),
                  machineCoord.x, machineCoord.y, machineCoord.z, machineCoord.fourth,
                  workCoord.x, workCoord.y, workCoord.z, workCoord.fourth
 				 );

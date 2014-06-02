@@ -155,153 +155,148 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="930"/>
+        <location filename="../gcode.cpp" line="905"/>
         <source>Incorrect - extra axis present in hardware but options set for only 3 axes. Please fix options.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="939"/>
+        <location filename="../gcode.cpp" line="914"/>
         <source>Incorrect - extra axis not present in hardware but options set for &gt; 3 axes. Please fix options.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="970"/>
-        <source>Decoded: State:%s</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../gcode.cpp" line="972"/>
-        <source>Decoded: MPos: %f,%f,%f WPos: %f,%f,%f
+        <location filename="../gcode.cpp" line="945"/>
+        <source>Decoded: State:%s MPos: %f,%f,%f WPos: %f,%f,%f
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="977"/>
-        <source>Decoded: MPos: %f,%f,%f,%f WPos: %f,%f,%f,%f
+        <location filename="../gcode.cpp" line="951"/>
+        <source>Decoded: State:%s MPos: %f,%f,%f,%f WPos: %f,%f,%f,%f
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1029"/>
+        <location filename="../gcode.cpp" line="1004"/>
         <source>GOT-TE:%s
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1051"/>
+        <location filename="../gcode.cpp" line="1026"/>
         <source>Sending file &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1198"/>
+        <location filename="../gcode.cpp" line="1173"/>
         <source>Gave up waiting for OK
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1217"/>
+        <location filename="../gcode.cpp" line="1192"/>
         <source>Code sent successfully with %1 error(s):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1229"/>
+        <location filename="../gcode.cpp" line="1204"/>
         <source>Code sent successfully with no errors.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1236"/>
+        <location filename="../gcode.cpp" line="1211"/>
         <source>Filtered %1 commands:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1249"/>
+        <location filename="../gcode.cpp" line="1224"/>
         <source>Process interrupted.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1283"/>
+        <location filename="../gcode.cpp" line="1258"/>
         <source>Removed unsupported command &apos;%1&apos; part of &apos;%2&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1299"/>
+        <location filename="../gcode.cpp" line="1274"/>
         <source>Removed unsupported G command &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1312"/>
+        <location filename="../gcode.cpp" line="1287"/>
         <source>Removed unsupported M command &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1331"/>
+        <location filename="../gcode.cpp" line="1306"/>
         <source>Removed unsupported command &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1464"/>
+        <location filename="../gcode.cpp" line="1439"/>
         <source>Unable to remove enough decimal places for command (will be truncated): %s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1468"/>
+        <location filename="../gcode.cpp" line="1443"/>
         <source>Error, insufficent reduction &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1470"/>
+        <location filename="../gcode.cpp" line="1445"/>
         <source>Precision reduced &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1666"/>
+        <location filename="../gcode.cpp" line="1641"/>
         <source>Z-Rate Limit: [%1]=&gt;[%2]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1671"/>
+        <location filename="../gcode.cpp" line="1646"/>
         <source>Z-Rate Limit: [%1]=&gt;[%2,%3]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1716"/>
+        <location filename="../gcode.cpp" line="1691"/>
         <source>XY-Rate Limit FIX: [%1]=&gt;[%2]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1775"/>
+        <location filename="../gcode.cpp" line="1750"/>
         <source>Bad command: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1879"/>
+        <location filename="../gcode.cpp" line="1854"/>
         <source>Options specify use mm but Grbl parser set for inches. Fixing.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1884"/>
+        <location filename="../gcode.cpp" line="1859"/>
         <source>Options specify use inches but Grbl parser set for mm. Fixing.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1898"/>
+        <location filename="../gcode.cpp" line="1873"/>
         <source>Options specify use mm but Grbl reporting set for inches. Fixing.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1903"/>
+        <location filename="../gcode.cpp" line="1878"/>
         <source>Options specify use inches but Grbl reporting set for mm. Fixing.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1939"/>
-        <location filename="../gcode.cpp" line="1940"/>
+        <location filename="../gcode.cpp" line="1914"/>
+        <location filename="../gcode.cpp" line="1915"/>
         <source>(mm)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1944"/>
-        <location filename="../gcode.cpp" line="1945"/>
+        <location filename="../gcode.cpp" line="1919"/>
+        <location filename="../gcode.cpp" line="1920"/>
         <source>(in)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1048,11 +1043,6 @@ What does this mean to you? Arc commands will now run smoother and faster than b
         <location filename="../rs232.cpp" line="161"/>
         <source>Unexpected: Told to send %d bytes
 </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../log4qt/logmanager.cpp" line="311"/>
-        <source>Initialising Log4Qt %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

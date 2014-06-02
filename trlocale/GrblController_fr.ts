@@ -49,7 +49,7 @@
         <location filename="../gcode.cpp" line="172"/>
         <source>SENDING: 0x%02X (CTRL-X) to check presence of Grbl
 </source>
-        <translation>Emis : 0x%02X (CTRL-X) pour verifier la presence de Grbl</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../gcode.cpp" line="175"/>
@@ -61,7 +61,7 @@
         <location filename="../gcode.cpp" line="331"/>
         <source>Got Grbl Version (Parsed:) %d.%d%c ($$=%d)
 </source>
-        <translation>Vous avez la version Grbl (analyse)  %d.%d%c ($$=%d)\n</translation>
+        <translation>Vous avez la version Grbl (analysée)  %d.%d%c ($$=%d)\n</translation>
     </message>
     <message>
         <location filename="../gcode.cpp" line="348"/>
@@ -77,13 +77,13 @@
         <location filename="../gcode.cpp" line="406"/>
         <source>SENDING[%d]: 0x%02X (CTRL-X)
 </source>
-        <translation>EMIS[%d]: 0x%02X (CTRL-X)\n</translation>
+        <translation>EMISSION[%d]: 0x%02X (CTRL-X)\n</translation>
     </message>
     <message>
         <location filename="../gcode.cpp" line="408"/>
         <source>SENDING[%d]: %s
 </source>
-        <translation>EMIS[%d]: %s\n</translation>
+        <translation>EMISSION[%d]: %s\n</translation>
     </message>
     <message>
         <location filename="../gcode.cpp" line="442"/>
@@ -106,7 +106,7 @@
     <message>
         <location filename="../gcode.cpp" line="564"/>
         <source>Unexpected: list is empty (o)!</source>
-        <translation>Liste attendue vide (o) </translation>
+        <translation>Liste inattendue vide (o) </translation>
     </message>
     <message>
         <source>GOT[%d]:%s for %s
@@ -121,14 +121,14 @@
     <message>
         <location filename="../gcode.cpp" line="582"/>
         <source>Unexpected: list is empty (e)!</source>
-        <translation>Liste attendue vide (e) </translation>
+        <translation>Liste inattendue vide (e) </translation>
     </message>
     <message>
         <location filename="../gcode.cpp" line="640"/>
         <location filename="../gcode.cpp" line="767"/>
         <source>GOT:%s
 </source>
-        <translation>Obtenu : %s\n</translation>
+        <translation>Vous avez : %s\n</translation>
     </message>
     <message>
         <location filename="../gcode.cpp" line="707"/>
@@ -171,15 +171,17 @@
         <translation type="obsolete">PosT :</translation>
     </message>
     <message>
+        <location filename="../gcode.cpp" line="945"/>
         <source>Decoded: State:%s MPos: %f,%f,%f WPos: %f,%f,%f
 </source>
-        <translation type="obsolete">Décodage : Etat :%s MPos: %f,%f,%f WPos: %f,%f,%f
+        <translation>Décodage : Etat :%s MPos: %f,%f,%f WPos: %f,%f,%f
 </translation>
     </message>
     <message>
+        <location filename="../gcode.cpp" line="951"/>
         <source>Decoded: State:%s MPos: %f,%f,%f,%f WPos: %f,%f,%f,%f
 </source>
-        <translation type="obsolete">Décodage : Etat :%s MPos: %f,%f,%f,%f WPos: %f,%f,%f,%f
+        <translation>Décodage : Etat :%s MPos: %f,%f,%f,%f WPos: %f,%f,%f,%f
 </translation>
     </message>
     <message>
@@ -192,164 +194,145 @@
         <location filename="../gcode.cpp" line="587"/>
         <source>GOT[%d]: &apos;%s&apos; for &apos;%s&apos; (aggressive)
 </source>
-        <translation>Emis :[%d]: &apos;%s&apos; pour &apos;%s&apos; (aggressif)</translation>
+        <translation>Vous avez :[%d]: &apos;%s&apos; pour &apos;%s&apos; (aggressif)</translation>
     </message>
     <message>
         <location filename="../gcode.cpp" line="602"/>
         <source>GOT: &apos;%s&apos; (aggressive)
 </source>
-        <translation>EMIS : &apos;%s&apos; (aggressif)</translation>
+        <translation>Vous avez : &apos;%s&apos; (aggressif)</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="930"/>
+        <location filename="../gcode.cpp" line="905"/>
         <source>Incorrect - extra axis present in hardware but options set for only 3 axes. Please fix options.</source>
         <translation>L&apos;axe supplémentaire existe matériellement. Veuillez corriger les options en cochant 4 ème axe.</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="939"/>
+        <location filename="../gcode.cpp" line="914"/>
         <source>Incorrect - extra axis not present in hardware but options set for &gt; 3 axes. Please fix options.</source>
         <translation>L&apos;axe supplémentaire n&apos;existe pas matériellement. Veuillez corriger les options  en décochant 4 ème axe.</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="970"/>
-        <source>Decoded: State:%s</source>
-        <translation>Decodage : Etat :%</translation>
-    </message>
-    <message>
-        <location filename="../gcode.cpp" line="972"/>
-        <source>Decoded: MPos: %f,%f,%f WPos: %f,%f,%f
-</source>
-        <translation>Decodage : MPos: %f,%f,%f,%f WPos: %f,%f,%f,%f
-</translation>
-    </message>
-    <message>
-        <location filename="../gcode.cpp" line="977"/>
-        <source>Decoded: MPos: %f,%f,%f,%f WPos: %f,%f,%f,%f
-</source>
-        <translation>Decodage : MPos: %f,%f,%f,%f WPos: %f,%f,%f,%f
-</translation>
-    </message>
-    <message>
-        <location filename="../gcode.cpp" line="1029"/>
+        <location filename="../gcode.cpp" line="1004"/>
         <source>GOT-TE:%s
 </source>
-        <translation type="unfinished">Obtenu  evenement temporel :%s\n</translation>
+        <translation>Vous avez -TE :%s\n</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1051"/>
+        <location filename="../gcode.cpp" line="1026"/>
         <source>Sending file &apos;%1&apos;</source>
         <translation>Emission du fichier &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1198"/>
+        <location filename="../gcode.cpp" line="1173"/>
         <source>Gave up waiting for OK
 </source>
         <translation>Fin d&apos;attent Ok\n</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1217"/>
+        <location filename="../gcode.cpp" line="1192"/>
         <source>Code sent successfully with %1 error(s):</source>
         <translation>Code émis correctement avec %1 erreur(s)</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1229"/>
+        <location filename="../gcode.cpp" line="1204"/>
         <source>Code sent successfully with no errors.</source>
         <translation>Code émis correctement sans erreur</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1236"/>
+        <location filename="../gcode.cpp" line="1211"/>
         <source>Filtered %1 commands:</source>
         <translation>Commande filtrée %1</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1249"/>
+        <location filename="../gcode.cpp" line="1224"/>
         <source>Process interrupted.</source>
         <translation>Processus interrompu</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1283"/>
+        <location filename="../gcode.cpp" line="1258"/>
         <source>Removed unsupported command &apos;%1&apos; part of &apos;%2&apos;</source>
         <translation>Suppression de la commande &apos;%1&apos; portion de &apos;%2 ( non supportée)</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1299"/>
+        <location filename="../gcode.cpp" line="1274"/>
         <source>Removed unsupported G command &apos;%1&apos;</source>
-        <translation>Suppression de la commande G  &apos;%1&apos;  non supportée</translation>
+        <translation>Suppression de la commande G  &apos;%1&apos;  non supprortée</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1312"/>
+        <location filename="../gcode.cpp" line="1287"/>
         <source>Removed unsupported M command &apos;%1&apos;</source>
         <translation>Suppression de la commande M  &apos;%1&apos;  non supprortée</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1331"/>
+        <location filename="../gcode.cpp" line="1306"/>
         <source>Removed unsupported command &apos;%1&apos;</source>
         <translation>Suppression de la commande &apos;%1&apos;  non supprortée</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1464"/>
+        <location filename="../gcode.cpp" line="1439"/>
         <source>Unable to remove enough decimal places for command (will be truncated): %s</source>
-        <translation>Impossible de supprimer assez de decimales pour la commande (sera tronque) %s</translation>
+        <translation>Impossible de supprimer assez de décimales pour la commande (sera tronqué) %s</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1468"/>
+        <location filename="../gcode.cpp" line="1443"/>
         <source>Error, insufficent reduction &apos;%1&apos;</source>
         <translation>Erreur : réduction insuffisante  &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1470"/>
+        <location filename="../gcode.cpp" line="1445"/>
         <source>Precision reduced &apos;%1&apos;</source>
         <translation>Précision réduite  &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1666"/>
+        <location filename="../gcode.cpp" line="1641"/>
         <source>Z-Rate Limit: [%1]=&gt;[%2]</source>
         <translation>Limite de vitesse Z  [%1]=&gt;[%2]</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1671"/>
+        <location filename="../gcode.cpp" line="1646"/>
         <source>Z-Rate Limit: [%1]=&gt;[%2,%3]</source>
         <translation>Limite de vitesse Z :  [%1]=&gt;[%2,%3]</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1716"/>
+        <location filename="../gcode.cpp" line="1691"/>
         <source>XY-Rate Limit FIX: [%1]=&gt;[%2]</source>
         <translation>Correction de la limite de vitesse XY : [%1]=&gt;[%2]</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1775"/>
+        <location filename="../gcode.cpp" line="1750"/>
         <source>Bad command: %1</source>
         <translation>Commande erronée : %1</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1879"/>
+        <location filename="../gcode.cpp" line="1854"/>
         <source>Options specify use mm but Grbl parser set for inches. Fixing.</source>
         <translation>Vous utiliser les mm alors que l&apos;analyse indique des pouces. Corriger</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1884"/>
+        <location filename="../gcode.cpp" line="1859"/>
         <source>Options specify use inches but Grbl parser set for mm. Fixing.</source>
         <translation>Vous devez utiliser les pouces alors que l&apos;analyse indique des mm. Corriger</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1898"/>
+        <location filename="../gcode.cpp" line="1873"/>
         <source>Options specify use mm but Grbl reporting set for inches. Fixing.</source>
         <translation>Vous utiliser les mm alors que Grbl donne despouces. Corriger</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1903"/>
+        <location filename="../gcode.cpp" line="1878"/>
         <source>Options specify use inches but Grbl reporting set for mm. Fixing.</source>
         <translation>Vous utiliser les pouces alors que Grbl donne des mm. Corriger</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1939"/>
-        <location filename="../gcode.cpp" line="1940"/>
+        <location filename="../gcode.cpp" line="1914"/>
+        <location filename="../gcode.cpp" line="1915"/>
         <source>(mm)</source>
         <translation>(mm)</translation>
     </message>
     <message>
-        <location filename="../gcode.cpp" line="1944"/>
-        <location filename="../gcode.cpp" line="1945"/>
+        <location filename="../gcode.cpp" line="1919"/>
+        <location filename="../gcode.cpp" line="1920"/>
         <source>(in)</source>
         <translation>(pouce)</translation>
     </message>
@@ -839,7 +822,7 @@ Vos paramètres ont été modifiés pour permettre ce mode. Pourquoi? Parce qu&a
     <message>
         <location filename="../mainwindow.cpp" line="416"/>
         <source>User clicked Port Open/Close</source>
-        <translation>L&apos;utilisateur a clique Ouverture/Fermeture du port</translation>
+        <translation>L&apos;utilisateur a cliqué Ouverture/Fermeture du port</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="515"/>
@@ -850,14 +833,6 @@ Vos paramètres ont été modifiés pour permettre ce mode. Pourquoi? Parce qu&a
         <location filename="../mainwindow.cpp" line="322"/>
         <source>Do you want to zero the displayed position before proceeding?</source>
         <translation>Voulez-vous afficher la postion zéro avant de démarrer ?</translation>
-    </message>
-    <message>
-        <source>%s has started</source>
-        <translation type="obsolete">% est parti</translation>
-    </message>
-    <message>
-        <source>%s has stopped</source>
-        <translation type="obsolete">% est arrete</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="724"/>
@@ -897,47 +872,12 @@ Vos paramètres ont été modifiés pour permettre ce mode. Pourquoi? Parce qu&a
     <message>
         <location filename="../mainwindow.cpp" line="1339"/>
         <source>Spindle On.</source>
-        <translation>Marche de la  broche</translation>
+        <translation>Marche broche</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1344"/>
         <source>Spindle Off.</source>
-        <translation>Arrêt de la broche</translation>
-    </message>
-    <message>
-        <source>Usr chg: pos=%d new=%d
-</source>
-        <translation type="obsolete">Changement de position : %d -&gt; =%d</translation>
-    </message>
-    <message>
-        <source>Usr chg: pos=%.1f new=%.1f
-</source>
-        <translation type="obsolete">Changement de position : %.1f -&gt; =%.1f</translation>
-    </message>
-    <message>
-        <source>Usr chg no slider: %d
-</source>
-        <translation type="obsolete">Utilisation du coulisseau :  %d</translation>
-    </message>
-    <message>
-        <source>Usr chg no slider: %.1f
-</source>
-        <translation type="obsolete">Utilisation du coulisseau :  %.1f</translation>
-    </message>
-    <message>
-        <source>Pressed and stopped
-</source>
-        <translation type="obsolete">Actionne et arret</translation>
-    </message>
-    <message>
-        <source>Pressed not stopped
-</source>
-        <translation type="obsolete">Actionne sans arret</translation>
-    </message>
-    <message>
-        <source>Released
-</source>
-        <translation type="obsolete">Relache</translation>
+        <translation>Arrêt broche</translation>
     </message>
 </context>
 <context>
@@ -1160,15 +1100,11 @@ Vos paramètres ont été modifiés pour permettre ce mode. Pourquoi? Parce qu&a
         <location filename="../rs232.cpp" line="161"/>
         <source>Unexpected: Told to send %d bytes
 </source>
-        <translation>Inattendu : impossible d&apos;envoyer%d octets</translation>
-    </message>
-    <message>
-        <source>Unable to write bytes to port probably due to outgoing queue full. Write data lost!</source>
-        <translation type="obsolete">Impossible d&apos;ecrire sur le port, probablement la file d&apos;attente de sortie est pleine.Perte de donnees en ecriture !</translation>
+        <translation>Inattendu : tenu d&apos;envooyer%d octets</translation>
     </message>
     <message>
         <source>Error writing to port. Write data lost!</source>
-        <translation type="obsolete">Erreu d&apos;ecriture sur le port. Les donnees a ecrire sont perdues</translation>
+        <translation type="obsolete">Erreu d&apos;écriture sur le port. Les données à écrire sont perdues</translation>
     </message>
     <message>
         <location filename="../renderitemlist.cpp" line="156"/>
@@ -1189,15 +1125,6 @@ Vos paramètres ont été modifiés pour permettre ce mode. Pourquoi? Parce qu&a
         <location filename="../renderitemlist.cpp" line="159"/>
         <source>  Height-Y: </source>
         <translation>  Haut-Y: </translation>
-    </message>
-    <message>
-        <source>Unexpected type %c</source>
-        <translation type="obsolete">Type attendu %c</translation>
-    </message>
-    <message>
-        <location filename="../log4qt/logmanager.cpp" line="311"/>
-        <source>Initialising Log4Qt %1</source>
-        <translation>Initialisation de LOg4Qt %1</translation>
     </message>
 </context>
 <context>
