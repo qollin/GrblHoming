@@ -1863,9 +1863,10 @@ void GCode::axisAdj(char axis, float coord, bool inv, bool absoluteAfterAxisAdj,
     QString cmd = QString("G01 ").append(axis)
             .append(QString::number(coord));
 
-    if (axis == 'Z')
-    {
+    if (axis == 'Z') {
         cmd.append(" F").append(QString::number(controlParams.zJogRate));
+    } else {
+        cmd.append(" F").append(QString::number(controlParams.xyRateAmount));
     }
 
     SendJog(cmd, absoluteAfterAxisAdj);

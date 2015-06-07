@@ -114,6 +114,8 @@ signals:
     void goToHome();
     void setItems(QList<PosItem>);
 
+    void setLinesFile(QString);
+
 private slots:
     //buttons
     void openPort();
